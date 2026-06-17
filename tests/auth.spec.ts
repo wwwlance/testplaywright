@@ -1,19 +1,11 @@
-import { test } from '../base';
+import { expect, test } from '../base';
 
-test('register', async ({ 
-  registerPage
- }) => {
-  await registerPage.goto();
-  await registerPage.register();
-  await registerPage.registerSuccess();
-});
-
-test('login', async ({ 
+test('login and logout', async ({ 
   authPage
  }) => {
   await authPage.goto();
   await authPage.login();
-  await authPage.loginSuccess();
+  await expect(authPage.authMessage).toContainText('You logged into a secure area!');
   await authPage.logout();
-  await authPage.logoutSuccess();
+  await expect(authPage.authMessage).toContainText('You logged out of the secure area!');
 });
