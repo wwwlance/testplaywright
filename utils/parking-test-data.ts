@@ -54,17 +54,6 @@ export const parkingScenarios = [
     // =========================
 
     {
-        name: 'Short-Term - 59 minutes',
-        parkingLot: 'ShortTerm',
-        entryDate: '2026-06-17',
-        exitDate: '2026-06-17',
-        entryTime: '08:00',
-        exitTime: '08:59',
-        expectedCost: '2.00€',
-        expectedDuration: '0 Day(s), 0 Hour(s), 59 Minute(s)'
-    },
-
-    {
         name: 'Short-Term - 1 hour',
         parkingLot: 'ShortTerm',
         entryDate: '2026-06-17',

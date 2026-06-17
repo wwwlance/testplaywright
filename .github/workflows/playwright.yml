@@ -8,6 +8,14 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
+      LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+      LOGIN_URL: ${{ secrets.LOGIN_URL }}
+      REGISTER_PASSWORD: ${{ secrets.REGISTER_PASSWORD}}
+      REGISTER_URL: ${{ secrets.REGISTER_URL }}
+      CARS_URL: ${{ secrets.CARS_URL }}
+      PARKING_URL: ${{ secrets.PARKING_URL }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
