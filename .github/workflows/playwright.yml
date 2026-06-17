@@ -8,6 +8,14 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      PARKING_URL: ${{ secrets.LOGIN_USERNAME }}
+      PARKING_URL: ${{ secrets.LOGIN_PASSWORD }}
+      PARKING_URL: ${{ secrets.LOGIN_URL }}
+      PARKING_URL: ${{ secrets.REGISTER_PASSWORD}}
+      PARKING_URL: ${{ secrets.REGISTER_URL }}
+      PARKING_URL: ${{ secrets.CARS_URL }}
+      PARKING_URL: ${{ secrets.PARKING_URL }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
