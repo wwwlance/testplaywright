@@ -1,5 +1,4 @@
 import { Locator, Page } from "playwright";
-import { expect } from "playwright/test";
 
 export class AuthPage {
     public url = process.env.LOGIN_URL!;
